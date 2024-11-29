@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f7f1; /* Fondo más suave */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
+    margin: 0;
+}
+
+.tabla-estilizada {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.2em;
+    width: 80%; /* Ajusta el ancho de la tabla */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    background-color: #fff;
+    border-radius: 12px; /* Esquinas más redondeadas */
+    overflow: hidden;
+}
+
+.tabla-estilizada thead tr {
+    background-color: #28a745; /* Verde brillante */
+    color: #fff;
+    text-align: left;
+}
+
+.tabla-estilizada th, .tabla-estilizada td {
+    padding: 12px 15px;
+}
+
+.tabla-estilizada tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabla-estilizada tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9; /* Gris claro para filas pares */
+}
+
+.tabla-estilizada tbody tr:last-of-type {
+    border-bottom: 2px solid #28a745; /* Borde verde en la última fila */
+}
+
+.tabla-estilizada tbody tr.fila-activa {
+    font-weight: bold;
+    color: #28a745; /* Verde más intenso */
+}
+
+/* Formulario centrado junto a la tabla */
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin-right: 20px; /* Espacio entre la tabla y el formulario */
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15); /* Sombra suave en hover */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #28a745; /* Bordes verdes al enfocar */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra verde */
+}
+
+form button {
+    background-color: #28a745; /* Verde brillante */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838; /* Verde más oscuro en hover */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el cursor */
+}
+
+form button:active {
+    transform: translateY(1px); /* Efecto al hacer clic */
+}
+
+form button:focus {
+    outline: none; /* Elimina el borde de enfoque por defecto */
+}

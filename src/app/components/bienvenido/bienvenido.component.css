@@ -1,0 +1,71 @@
+.anuncio-bienvenida {
+    background-color: #28a745; /* Color verde */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px 30px;
+    width: 80%;
+    max-width: 420px;
+    margin: 30px auto;
+    animation: entrada 1s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.anuncio-bienvenida h1 {
+    font-size: 2.2em;
+    color: #ffffff; /* Blanco */
+    margin: 0;
+    font-weight: bold;
+    animation: brillo 2s ease infinite;
+    letter-spacing: 1px;
+}
+
+.anuncio-bienvenida p {
+    font-size: 1.1em;
+    color: #f1f1f1; /* Gris muy claro */
+    margin-top: 15px;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.anuncio-bienvenida .boton {
+    background-color: #155724; /* Verde oscuro */
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+}
+
+.anuncio-bienvenida .boton:hover {
+    background-color: #218838; /* Verde más brillante */
+    transform: translateY(-3px);
+}
+
+.anuncio-bienvenida .boton:active {
+    transform: translateY(1px); /* Efecto de clic */
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brillo {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(56, 231, 184, 0.8), 0 0 20px rgba(82, 240, 177, 1);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(56, 231, 184, 0.8), 0 0 25px rgba(82, 240, 177, 1);
+    }
+}

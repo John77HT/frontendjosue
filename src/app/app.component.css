@@ -1,0 +1,78 @@
+/* Estilos del encabezado fijo */
+.encabezado-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #28a745; /* Verde brillante */
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.titulo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera para destacar */
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navegacion li {
+    display: inline-block;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navegacion a:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+.menu-navegacion a:active {
+    background-color: #1e7e34; /* Verde aún más oscuro al hacer clic */
+    transform: translateY(1px); /* Efecto de hundimiento */
+}
+
+/* Estilos para el contenido principal */
+main.contenido {
+    padding-top: 80px; /* Ajusta el contenido para que no se oculte debajo del encabezado fijo */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Agregar fondo y estilizar el body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f4; /* Fondo suave claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Mejoras de accesibilidad */
+a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}

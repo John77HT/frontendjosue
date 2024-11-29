@@ -1,0 +1,44 @@
+<table class="tabla-estilizada">
+    <thead>
+        <tr>
+            <th>ID Lugar</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arrayClientes">
+            <td>{{ item.id_lugar }}</td>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.direccion }}</td>
+            <td>{{ item.tipo }}</td>
+            <td>
+                <button (click)="editarCliente(item)">Editar</button>
+                <button (click)="eliminarCliente(item.id_cliente)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<form [formGroup]="nuevoClienteForm" (ngSubmit)="crearCliente()">
+    <label for="id_cliente">ID Lugar:</label>
+    <input id="id_cliente" formControlName="id_cliente" required [readonly]="clienteEnEdicion">
+
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" required>
+
+    <label for="apellido">Direccion:</label>
+    <input id="apellido" formControlName="apellido" required>
+
+    <label for="edad">Tipo:</label>
+    <input id="edad" formControlName="edad" required>
+
+
+
+    
+
+    <button type="submit">{{ clienteEnEdicion ? 'Actualizar Cliente' : 'Crear Cliente' }}</button>
+    
+</form>
